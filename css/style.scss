@@ -1,0 +1,409 @@
+@import url('../css/header.css');
+@import url('../css/layout.css');
+@import url('../css/footer.css');
+
+.fa-pointer {
+    color: var(--white);
+    width: 20px;
+}
+
+.top {
+    margin-bottom: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    &__img {
+        position: absolute;
+        width: 1920px;
+        height: 1038px;
+        top: -120px;
+        left: -310px;
+        z-index: -100;
+    }
+
+    &__img-mobile {
+        display: none;
+    }
+
+    &__title {
+        padding-top: 260px;
+        max-width: 561px;
+        color: var(--white);
+        text-align: center;
+        font-family: Garamond;
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    &__pointer {
+        padding-top: 290px;
+        padding-bottom: 100px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        &_text {
+            color: var(--white);
+            font-family: Cormorant Garamond;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 140%; 
+        }
+    }
+
+    &__quotation-marks {
+        padding-top: 120px;
+        padding-bottom: 40px;
+        width: 80px;
+        height: 64px;
+    }
+
+    &__subtitle {
+        padding-top: 20px;
+        max-width: 856px;
+        color: var(--white);
+        text-align: center;
+        font-family: Cormorant Garamond;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+    }
+}
+
+.services {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 44px;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;        
+    position: relative;
+
+    &__img {
+        width: 396px;
+        height: 300px;
+    }
+
+    &__frame {
+        position: absolute;
+        width: 396px;
+        height: 300px;
+        border: 1px solid var(--accent);
+        opacity: 0.5;
+        top: -20px;
+        left: 20px;
+        z-index: -100;
+    }
+
+    &__subtitle {
+        padding-bottom: 36px;
+        color: var(--white);
+        font-family: Garamond;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+    }
+}  
+ 
+.partners {
+    padding-top: 88px;
+    padding-bottom: 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 125px;
+
+    &__logo {
+        color: var(--white);
+        opacity: 0.5;
+    }
+}
+
+.works {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        padding-bottom: 80px;
+        color: var(--white);
+        text-align: center;
+        font-family: Garamond;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%; 
+    }
+}
+
+.works-subtitle {
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+
+    &__link {
+        color: var(--white);
+        text-align: center;
+        font-family: Cormorant Garamond;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        transition: all .3s;
+
+        &_active {
+            color: var(--accent);
+            font-family: Cormorant Garamond;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+            text-decoration-line: underline;
+        }
+    }
+
+    &__link:hover {
+        color: var(--accent);
+        font-family: Cormorant Garamond;
+        text-decoration-line: underline;
+    }
+}
+
+.works-photo {
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    &__img {
+        width: 416px;
+        height: 416px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    /* Cтили для планшета */
+    .line {
+       width: 767px;
+    }
+
+    .top {
+
+        &__img {
+            position: absolute;
+            width: 1024px;
+            height: 554px;
+            top: -150px;
+            left: -190px;
+        }
+
+        &__title {
+            padding-top: 110px;
+            max-width: 280px;
+            font-size: 36px;
+        }
+
+        &__pointer {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        &__quotation-marks {
+            padding-top: 0px;
+            width: 48px;
+        }
+
+        &__subtitle {
+            padding-top: 20px;
+            max-width: 360px;
+            font-size: 16px;
+        }
+    }
+
+    .services {
+        justify-content: center;
+        margin-left: 110px;
+        margin-right: 110px;
+        gap: 32px;
+    }
+
+    .service {
+        &__img {
+            width: 160px;
+            height: 121px;
+        }
+
+
+        &__frame {
+            position: absolute;
+            width: 160px;
+            height: 121px;
+            top: -20px;
+            left: 20px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+    }
+
+    .partners {
+        flex-wrap: wrap;
+        align-items: center;
+        margin-left: 110px;
+        margin-right: 110px;
+        gap: 36px;
+
+        &__logo {
+            padding-left: 50px;
+            padding-right: 50px;
+            width: 80px;
+        }
+
+        &__logo-jpg {
+            width: 90px;
+        }
+    }
+
+    .works {
+        margin-left: 110px;
+        margin-right: 110px;
+
+        &__title {
+            
+            padding-bottom: 40px;
+            font-size: 36px;
+        }
+    }
+
+    .works-subtitle {
+        margin-left: 110px;
+        margin-right: 110px;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .works-photo {
+        margin-left: 60px;
+        margin-right: 60px;
+        justify-content: center;
+        gap: 16px;
+
+        &__img {
+            width: 110px;
+            height: 110px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Cтили для мобильного телефона */
+    .line {
+        width: 284px;
+    }
+
+    .top {
+        &__img {
+            display: none;
+        }
+
+        &__img-mobile {
+            display: block;
+            max-width: 320px;
+        }
+
+        &__title {
+            padding-top: 32px;
+        }
+
+        &__pointer {
+            padding-top: 20px;
+            padding-bottom: 60px;
+        }
+    }
+
+    .service {
+        &__img {
+            width: 230px;
+            height: 174px;
+        }
+
+
+        &__frame {
+            position: absolute;
+            width: 230px;
+            height: 174px;
+            top: -20px;
+            left: 20px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+    }
+
+    .partners {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 16px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+
+        &__logo {
+            padding-left: 10px;
+            padding-right: 10px;
+            width: 40px;
+        }
+
+        &__logo-jpg {
+            width: 60px;
+        }   
+    }
+
+    .works {
+        margin-left: 16px;
+        margin-right: 16px;
+
+        &__title {
+            font-size: 32px;
+        }
+    }
+
+    .works-subtitle {
+        margin-left: 16px;
+        margin-right: 16px;
+
+        &__link {
+            font-size: 16px;
+
+            &_active {
+                font-size: 16px; 
+            }
+        }
+    }
+
+    .works-photo {
+        margin-left: 16px;
+        margin-right: 16px;
+
+        &__img {
+            width: 280px;
+            height: 280px;
+        }
+    }
+}

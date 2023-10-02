@@ -1,0 +1,141 @@
+.center {
+    padding-left: calc(50% - 1296px / 2);
+    padding-right: calc(50% - 1296px / 2);
+}
+
+.fa-header {
+    color: var(--white);
+    font-size: 36px;
+}
+
+.fa-header:hover {
+    transition: color .3s;
+    color: var(--accent);
+}
+
+.fa-header-bars-staggered-adaptive {
+    display: none;
+}
+
+.header {
+    padding-top: 37px;
+    padding-bottom: 39px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    z-index: -500;
+}
+
+@keyframes blink-2 {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+
+    &__item {
+        color: var(--white);
+        font-family: Cormorant Garamond;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+        transition: all .3s;
+
+        &_logo {
+            width: 40px;
+            height: 40px;
+        }
+
+        &_logo-arrow:hover {
+            animation: blink-2 1s linear;
+        }
+    }
+
+    &__item:hover {
+        color: var(--accent);
+        font-family: Cormorant Garamond;
+        text-decoration-line: underline;
+    }
+}
+
+.line {
+    width: 1296px;
+    height: 1px;
+    opacity: 0.5;
+    background: #FFF;
+}
+
+@media screen and (max-width: 1024px) {
+    /* Cтили для планшета */
+    .center {
+        padding-left: calc(50% - 736px / 2);
+        padding-right: calc(50% - 736px / 2);
+    }
+
+    .fa-header-bars-staggered {
+        display: none;
+    }
+
+    .fa-header-bars-staggered-adaptive {
+        display: block;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &__icons {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+        }
+    }
+
+    .menu__item_logo {
+        display: none;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+
+        &__item {
+            font-size: 14px;
+
+            &_logo {
+                display: none;
+            }
+
+            &_logo-arrow {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Cтили для мобильного телефона */
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

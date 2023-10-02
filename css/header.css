@@ -1,0 +1,126 @@
+@charset "UTF-8";
+.center {
+  padding-left: calc(50% - 648px);
+  padding-right: calc(50% - 648px);
+}
+
+.fa-header {
+  color: var(--white);
+  font-size: 36px;
+}
+
+.fa-header:hover {
+  transition: color 0.3s;
+  color: var(--accent);
+}
+
+.fa-header-bars-staggered-adaptive {
+  display: none;
+}
+
+.header {
+  padding-top: 37px;
+  padding-bottom: 39px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  z-index: -500;
+}
+
+@keyframes blink-2 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.menu {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+}
+.menu__item {
+  color: var(--white);
+  font-family: Cormorant Garamond;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 130%;
+  transition: all 0.3s;
+}
+.menu__item_logo {
+  width: 40px;
+  height: 40px;
+}
+.menu__item_logo-arrow:hover {
+  animation: blink-2 1s linear;
+}
+.menu__item:hover {
+  color: var(--accent);
+  font-family: Cormorant Garamond;
+  text-decoration-line: underline;
+}
+
+.line {
+  width: 1296px;
+  height: 1px;
+  opacity: 0.5;
+  background: #FFF;
+}
+
+@media screen and (max-width: 1024px) {
+  /* Cтили для планшета */
+  .center {
+    padding-left: calc(50% - 368px);
+    padding-right: calc(50% - 368px);
+  }
+  .fa-header-bars-staggered {
+    display: none;
+  }
+  .fa-header-bars-staggered-adaptive {
+    display: block;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .header__icons {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+  }
+  .menu__item_logo {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+  .menu__item {
+    font-size: 14px;
+  }
+  .menu__item_logo {
+    display: none;
+  }
+  .menu__item_logo-arrow {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* Cтили для мобильного телефона */
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}/*# sourceMappingURL=header.css.map */

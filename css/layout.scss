@@ -1,0 +1,48 @@
+:root {
+    --white: #FFF;
+    --accent: #CDAA7D;
+    --background: #111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - 1296px / 2);
+    padding-right: calc(50% - 1296px / 2);
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+    /* Cтили для планшета */
+    .center {
+        padding-left: calc(50% - 736px / 2);
+        padding-right: calc(50% - 736px / 2);
+    }
+
+    .line {
+        width: 767px;
+     } 
+}
+
+@media screen and (max-width: 767px) {
+    /* Cтили для мобильного телефона */
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}

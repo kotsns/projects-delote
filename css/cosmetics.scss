@@ -1,0 +1,137 @@
+@import url('../css/header.css');
+@import url('../css/layout.css');
+@import url('../css/footer.css');
+
+em {
+    font-size: 36px;
+}
+
+.cosmetics {
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    &__title {
+        margin-top: 80px;
+        margin-bottom: 40px;
+        color: var(--white);
+        text-align: center;
+        font-family: Garamond;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+    }
+
+    &__subtitle {
+        color: var(--white);
+        font-family: Cormorant Garamond;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%; 
+        text-align: center;
+        gap: 40px;
+    }
+
+    &__point {
+        color: var(--white);
+        font-family: Cormorant Garamond;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+
+        &_item {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+table {
+    width: 100%;
+    overflow: auto;
+    border-collapse: collapse;
+}
+
+tr {
+    background: #83694A;
+}
+
+tr:nth-child(2n+1) {
+    background-color: #303030;
+}
+
+td:nth-child(n+2) {
+    color: var(--white);
+    text-align: center;
+    font-weight: 700;
+    padding: 0 40px 0 30px;
+}
+
+.cosmetics-table-title {
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    font-family: Cormorant Garamond;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.cosmetics-table-subtitle {
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    text-align: center;
+    font-family: Cormorant Garamond;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 250%;
+}
+
+.cosmetics-table-item {
+    padding-left: 40px;
+    color: var(--white);
+    font-family: Cormorant Garamond;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 250%;
+}
+
+@media screen and (max-width: 767px) {
+    /* Cтили для мобильного телефона */
+    .cosmetics {
+
+        &__title {
+            margin-top: 0px;
+            margin-bottom: 0px;
+            font-size: 32px;
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+
+    }
+
+    .cosmetics-table-title {
+        font-size: 18px;
+        line-height: 150%;
+    }
+    
+    .cosmetics-table-subtitle {
+        font-size: 18px;
+        line-height: 250%;
+    }
+    
+    .cosmetics-table-item {
+        padding-left: 16px;
+        font-size: 16px;
+        line-height: 250%;
+    }
+}
